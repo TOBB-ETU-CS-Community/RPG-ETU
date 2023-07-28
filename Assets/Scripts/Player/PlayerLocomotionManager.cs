@@ -146,7 +146,7 @@ public class PlayerLocomotionManager : CharacterLocomotionManager
             player.playerAnimationManager.PlayTargetActionAnimation("Dodge", true, 0.1f, false);
             player.playerStatManager.UpdateStamina(-30f, 1);
             
-            StartCoroutine(MoveCharacterSmoothly(rollDirection * 4));
+            StartCoroutine(MoveCharacterSmoothly(rollDirection * 4, 0.7f));
         }
     }
 

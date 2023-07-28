@@ -5,19 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e4927da-f5dd-4134-9767-582950d9fa71" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/AvatarChange.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AvatarChange.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Animancer/Read Me v7.4.2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Animancer/Read Me v7.4.2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ResetRigWeights.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/ResetRigWeights.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ResetRigWeights.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/ResetRigWeights.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/RigManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/RigManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerStatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerStatManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WeaponPlaceMatch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/WeaponPlaceMatch.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/WeaponPlaceMatch.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/WeaponPlaceMatch.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG-ETU/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG-ETU/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerLocomotionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerLocomotionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1690518943827</updated>
       <workItem from="1690518945380" duration="20000" />
-      <workItem from="1690518975918" duration="1325000" />
+      <workItem from="1690518975918" duration="1984000" />
     </task>
     <servers />
   </component>
