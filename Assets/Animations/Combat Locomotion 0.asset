@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a2d01d4f425b3848938f199392c9afb, type: 3}
+  m_Name: Combat Locomotion 0
+  m_EditorClassIdentifier: 
+  _Transition:
+    rid: 6233990464467369984
+  references:
+    version: 2
+    RefIds:
+    - rid: 6233990464467369984
+      type: {class: MixerTransition2D, ns: Animancer, asm: Animancer}
+      data:
+        _FadeDuration: 0.25
+        _Events:
+          _NormalizedTimes:
+          - 0.80670106
+          _Callbacks: []
+          _Names: []
+        _Speed: 1
+        _Animations:
+        - {fileID: -203655887218126122, guid: 2ebe1398734c5fd4ebf0895259038d3e, type: 3}
+        - {fileID: 7400000, guid: 6aa2008e4fe28b443b5c93d5b9f768d7, type: 3}
+        - {fileID: 7400000, guid: ee563b40c1f10dc4683533fda46662c3, type: 3}
+        - {fileID: 7400000, guid: af64ddd9da2232c4e84ad91b17e274c6, type: 3}
+        - {fileID: 7400000, guid: 4ba9cb46f1d6c854d98ac9aa94ed0013, type: 3}
+        _Speeds:
+        - 15
+        - 1
+        - 1
+        - 1
+        - 1
+        _SynchronizeChildren: 
+        _Thresholds:
+        - {x: 0, y: 0}
+        - {x: 0, y: 0.4}
+        - {x: 0.5, y: 0}
+        - {x: -0.5, y: -0}
+        - {x: 0, y: 1}
+        _DefaultParameter: {x: 0, y: 0}
+        _Type: 0
