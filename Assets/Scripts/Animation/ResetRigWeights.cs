@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations.Rigging;
 
 public class ResetRigWeights : StateMachineBehaviour
 {
     
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //RigManager.instance.RigWeight_Arm(1f);
-        //RigManager.instance.RigWeight_Look(1f);
+        RigManager.instance.ResetRigWeights();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

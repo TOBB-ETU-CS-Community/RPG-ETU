@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Character;
-using Player;
 using UnityEngine;
 
 public class PlayerStatManager : CharacterStatManager

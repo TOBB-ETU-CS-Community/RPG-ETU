@@ -9,7 +9,7 @@ public class PlayerInventory : MonoBehaviour
     public WeaponSlotManager weaponSlotManager;
     public WeaponItem weapon;
     
-    [SerializeField] private bool isEquipped;
+    [SerializeField] public bool isEquipped;
 
     private void Awake()
     {
@@ -19,17 +19,22 @@ public class PlayerInventory : MonoBehaviour
 
     public void ToggleWeapon()
     {
+        RigManager rigManager = RigManager.instance;
         if (isEquipped)
         {
             weaponSlotManager.UnloadWeapon();
             isEquipped = false;
             player.playerAnimationManager.PlayTargetActionAnimation("Sheath",true);
+            rigManager.defaultWeights[0]  = 0f;
+            rigManager.defaultWeights[1] = 0f;
         }
         else
         {
             weaponSlotManager.LoadWeapon(weapon);
             isEquipped = true;
             player.playerAnimationManager.PlayTargetActionAnimation("Unsheath",true);
+            rigManager.defaultWeights[0] = 1f;
+            rigManager.defaultWeights[1] = 1f;
         }
         
         player.playerAnimationManager.UpdateAnimatorBoolParameters("isEquipped",isEquipped);

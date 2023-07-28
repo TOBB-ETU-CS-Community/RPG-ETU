@@ -9,11 +9,15 @@ public class RigManager : MonoBehaviour
     [SerializeField] public RigBuilder rigBuilder;
     [SerializeField] public float[] targetWeights;
     [SerializeField] public float[] targetLerpSpeeds;
+    
+    [SerializeField] public float[] defaultWeights;
     private void Awake()
     {
         rigBuilder = GetComponent<RigBuilder>();
         targetWeights = new float[rigBuilder.layers.Count];
         targetLerpSpeeds = new float[rigBuilder.layers.Count];
+        defaultWeights = new float[rigBuilder.layers.Count];
+        
     }
 
     private void Start()
@@ -23,6 +27,9 @@ public class RigManager : MonoBehaviour
         
         targetWeights[0] = 0f;
         targetWeights[1] = 0f;
+        
+        defaultWeights[0] = 0f;
+        defaultWeights[1] = 0f;
 
         if (instance == null)
         {
@@ -60,5 +67,11 @@ public class RigManager : MonoBehaviour
     public void LerpSpeed_Look(float speed)
     {
         targetLerpSpeeds[0] = speed;
+    }
+    
+    public void ResetRigWeights()
+    {
+        targetWeights[0] = defaultWeights[0];
+        targetWeights[1] = defaultWeights[1];
     }
 }
