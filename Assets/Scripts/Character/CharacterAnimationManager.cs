@@ -34,4 +34,9 @@ public class CharacterAnimationManager : MonoBehaviour
         character.animator.SetBool(parameterName, value);
     }
     
+    public void UpdateAnimatorTriggerParameters(string parameterName)
+    {
+        character.animator.SetTrigger(parameterName);
+    }
+    
 }

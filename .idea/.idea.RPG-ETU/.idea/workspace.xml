@@ -6,8 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="0e4927da-f5dd-4134-9767-582950d9fa71" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG-ETU/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG-ETU/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Downloaded/Animations/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@Attack1_S.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Downloaded/Animations/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@Attack1_S.FBX.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Downloaded/Animations/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@Attack2.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Downloaded/Animations/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@Attack2.FBX.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Downloaded/Animations/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@Attack3.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Downloaded/Animations/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@Attack3.FBX.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Downloaded/Animations/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@MoveAttack1.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Downloaded/Animations/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@MoveAttack1.FBX.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/ResetActionFlag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/ResetActionFlag.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterAnimationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterAnimationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Prefabs/Weapons/Sword.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Prefabs/Weapons/Sword.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCombatManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerLocomotionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerLocomotionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,26 +35,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Asgrich\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Asgrich\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\Asgrich\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Asgrich\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Asgrich\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Asgrich\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Unity.exe" />
@@ -90,6 +103,7 @@
       <updated>1690518943827</updated>
       <workItem from="1690518945380" duration="20000" />
       <workItem from="1690518975918" duration="1984000" />
+      <workItem from="1690773413197" duration="5435000" />
     </task>
     <servers />
   </component>

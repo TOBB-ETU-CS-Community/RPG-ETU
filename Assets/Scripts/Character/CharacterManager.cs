@@ -14,6 +14,7 @@ public class CharacterManager : MonoBehaviour
     public bool isJumping = false;
     public bool isFalling = false;
     public bool isSprinting = false;
+    public bool isLightAttacking = false;
 
 
     protected virtual void Awake()
@@ -29,5 +30,14 @@ public class CharacterManager : MonoBehaviour
 
     protected virtual void LateUpdate()
     {
+    }
+
+    public virtual void ResetActionFlags()
+    {
+        isPerformingAction = false;
+        applyRootMotion = false;
+        canRotate = true;
+        canMove = true;
+
     }
 }

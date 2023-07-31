@@ -76,7 +76,10 @@ public class PlayerLocomotionManager : CharacterLocomotionManager
         leanDirection.Normalize();
 
         var dotProduct = Vector3.Dot(leanDirection, transform.right) / 2;
-        leanAmount = Mathf.Lerp(leanAmount, dotProduct, 0.05f);
+        if (moveAmount < 0.1f)
+            leanAmount = 0;
+        else
+            leanAmount = Mathf.Lerp(leanAmount, dotProduct, 0.05f);
         player.controller.Move(speed * Time.deltaTime * moveDirection);
         player.playerAnimationManager.UpdateAnimatorMovementParameters(leanAmount, moveAmount);
     }

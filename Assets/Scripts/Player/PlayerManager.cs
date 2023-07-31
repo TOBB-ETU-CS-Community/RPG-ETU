@@ -36,4 +36,13 @@ public class PlayerManager : CharacterManager
         PlayerCamera.instance.HandleAllCameraMovement();
         playerHUDManager.HandleHUD();
     }
+
+    public override void ResetActionFlags()
+    {
+        isPerformingAction = false;
+        applyRootMotion = false;
+        canRotate = true;
+        canMove = true;
+        isLightAttacking = false;
+    }
 }

@@ -1075,10 +1075,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 714708998224899279, guid: 7c59954d567aba54faf0de26262c866a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5423457124973510824, guid: 7c59954d567aba54faf0de26262c866a, type: 3}
       propertyPath: m_Data.m_SourceObjects.m_Item0.transform
       value: 
       objectReference: {fileID: 703187517}
+    - target: {fileID: 5886854133678523655, guid: 7c59954d567aba54faf0de26262c866a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8357307498468106084, guid: 7c59954d567aba54faf0de26262c866a, type: 3}
       propertyPath: m_Name
       value: Player

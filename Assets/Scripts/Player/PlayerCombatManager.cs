@@ -5,6 +5,7 @@ public class PlayerCombatManager : MonoBehaviour
     
     PlayerAnimationManager playerAnimationManager;
     PlayerManager player;
+    public bool isLightAttacking;
     
     private void Awake()
     {
@@ -14,15 +15,16 @@ public class PlayerCombatManager : MonoBehaviour
     
     public void HandleLightAttack(WeaponItem weapon)
     {
-        
-        if (weapon == null)
-            return;
-
+       
         if (player.isPerformingAction)
+        {
+            if (isLightAttacking)
+                playerAnimationManager.UpdateAnimatorTriggerParameters("Light_Trigger");
             return;
+        }
 
         playerAnimationManager.PlayTargetActionAnimation(weapon.Light_Attack_1, true);
-        
+        isLightAttacking = true;
     }
     
     public void TakeDamage(float damage)
