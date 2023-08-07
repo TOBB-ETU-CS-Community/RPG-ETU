@@ -1,11 +1,26 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
 
-namespace Character
+public class CharacterStatManager : MonoBehaviour
 {
-    public class CharacterStatManager : MonoBehaviour
+    public void Update()
     {
-        protected virtual void Awake()
-        {
-        }
+        HandleAllStatChanges();
+        HandleStatConstraints();
     }
+    
+
+    protected virtual void HandleAllStatChanges()
+    {
+       
+
+    }
+
+    protected virtual void HandleStatConstraints()
+    { 
+       
+    }
+    
+
 }

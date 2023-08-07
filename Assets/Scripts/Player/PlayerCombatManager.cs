@@ -1,15 +1,18 @@
 using UnityEngine;
 
-public class PlayerCombatManager : MonoBehaviour
+public class PlayerCombatManager : CharacterCombatManager
 {
     
     PlayerAnimationManager playerAnimationManager;
+    WeaponSlotManager weaponSlotManager;
     PlayerManager player;
+    
     public bool isLightAttacking;
     
     private void Awake()
     {
         playerAnimationManager = GetComponent<PlayerAnimationManager>();
+        weaponSlotManager = GetComponentInChildren<WeaponSlotManager>();
         player = GetComponent<PlayerManager>();
     }
     
@@ -27,11 +30,20 @@ public class PlayerCombatManager : MonoBehaviour
         isLightAttacking = true;
     }
     
-    public void TakeDamage(float damage)
+    public override void TakeDamage(float damage)
     {
-        print("DAMAGE BABYYYY");
         player.playerStatManager.UpdateHealth(-damage,2f);
         player.playerHUDManager.HandleHUD();
+    }
+    
+    public void HitStart()
+    {
+        weaponSlotManager.weaponHitboxManager.EnableCollider();
+    }
+    
+    public void HitEnd()
+    {
+        weaponSlotManager.weaponHitboxManager.DisableCollider();
     }
     
 }

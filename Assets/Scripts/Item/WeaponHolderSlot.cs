@@ -11,7 +11,6 @@ public class WeaponHolderSlot : MonoBehaviour
        if (weaponItem == null)
            return;
 
-
        var model = Instantiate(weaponItem.modelPrefab);
 
        if (model != null)

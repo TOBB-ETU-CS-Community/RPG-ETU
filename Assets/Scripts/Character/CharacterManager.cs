@@ -38,6 +38,5 @@ public class CharacterManager : MonoBehaviour
         applyRootMotion = false;
         canRotate = true;
         canMove = true;
-
     }
 }

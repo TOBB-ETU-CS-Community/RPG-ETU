@@ -27,7 +27,6 @@ public class PlayerManager : CharacterManager
     {
         base.Update();
         playerLocomotionManager.HandleAllMovement();
-        playerStatManager.HandleAllStatChanges();
     }
 
     protected override void LateUpdate()

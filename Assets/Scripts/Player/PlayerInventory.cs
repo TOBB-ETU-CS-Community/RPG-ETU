@@ -6,6 +6,7 @@ using UnityEngine.Animations.Rigging;
 public class PlayerInventory : MonoBehaviour
 {
     public PlayerManager player;
+    
     public WeaponSlotManager weaponSlotManager;
     public WeaponItem weapon;
     
