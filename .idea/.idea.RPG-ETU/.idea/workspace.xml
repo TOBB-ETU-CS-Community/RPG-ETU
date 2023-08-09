@@ -7,32 +7,27 @@
     <list default="true" id="0e4927da-f5dd-4134-9767-582950d9fa71" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG-ETU/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG-ETU/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/Human.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Character Meshes/Materials_Humans/Armor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Character Meshes/Materials_Humans/Armor.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Downloaded/Animations/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@Attack2.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Downloaded/Animations/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@Attack2.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Downloaded/Animations/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@Attack2_S.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Downloaded/Animations/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@Attack2_S.FBX.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Downloaded/Animations/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@Attack3.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Downloaded/Animations/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@Attack3.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Downloaded/Animations/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@Block.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Downloaded/Animations/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@Block.FBX.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Downloaded/Animations/Basic Anims/Combat/PunchLeft.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Downloaded/Animations/Basic Anims/Combat/PunchLeft.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Experiments AAA/2Handed.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Experiments AAA/2Handed.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Experiments AAA/2Handed@Attack1.FBX" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Experiments AAA/2Handed@Attack1.FBX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Lower Body Masking.mask" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Lower Body Masking.mask" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Upper Body Masking.mask" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Upper Body Masking.mask" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Downloaded/Animations/Basic Anims/Movement/Sprint.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Downloaded/Animations/Basic Anims/Movement/Sprint.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterAnimationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterAnimationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterLocomotionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterLocomotionManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterStatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterStatManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Prefabs/Weapons/First Sword(Clone).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Prefabs/Weapons/First Sword(Clone).prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Animations/LA_1.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Animations/LA_1.FBX.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Animations/LA_2.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Animations/LA_2.FBX.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Animations/LA_3.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Animations/LA_3.FBX.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyCombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyCombatManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Item/WeaponHitboxManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Item/WeaponHitboxManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Item/WeaponHolderSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Item/WeaponHolderSlot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Item/WeaponItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Item/WeaponItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Item/WeaponSlotManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Item/WeaponSlotManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCamera.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCombatManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerLocomotionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerLocomotionManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerStatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerStatManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +36,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/EnemyHitboxManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyParentalControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyUIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Item/WeaponHitboxManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -126,6 +123,7 @@
       <workItem from="1690773413197" duration="5435000" />
       <workItem from="1691392620725" duration="11820000" />
       <workItem from="1691406817722" duration="1403000" />
+      <workItem from="1691551647892" duration="23318000" />
     </task>
     <servers />
   </component>

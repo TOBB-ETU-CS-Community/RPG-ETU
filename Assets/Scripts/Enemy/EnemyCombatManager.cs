@@ -17,14 +17,5 @@ public class EnemyCombatManager : CharacterCombatManager
         enemy.enemyStatManager.UpdateHealth(-damage);
         enemy.enemyUIManager.HandleUI();
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-       
-            if (other.gameObject.CompareTag("Weapon"))
-            {
-                Debug.Log("Enemy hit player");
-                TakeDamage(10f);
-            }
-    }
+    
 }

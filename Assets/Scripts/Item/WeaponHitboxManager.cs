@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class WeaponHitboxManager : MonoBehaviour
 {
-   private Collider hitboxCollider;
+   
+   [SerializeField] private Collider hitboxCollider;
 
    public void EnableCollider()
    {
       print("COLLIDER ENABLED");
-      print(hitboxCollider.GetHashCode());
       hitboxCollider.enabled = true;
    }
    
@@ -24,6 +24,5 @@ public class WeaponHitboxManager : MonoBehaviour
    {
       hitboxCollider = collider;
    }
-
-
+   
 }

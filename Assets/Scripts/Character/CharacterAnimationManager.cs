@@ -25,10 +25,10 @@ public class CharacterAnimationManager : MonoBehaviour
         character.applyRootMotion = applyRoot;
         character.canRotate = canRotate;
         character.canMove = canMove;
-
+        
         character.animator.CrossFade(targetAnim, transitionDuration);
     }
-
+    
     public void UpdateAnimatorBoolParameters(string parameterName, bool value)
     {
         character.animator.SetBool(parameterName, value);

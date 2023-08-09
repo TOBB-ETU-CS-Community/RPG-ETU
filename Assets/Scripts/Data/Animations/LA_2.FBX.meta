@@ -546,6 +546,13 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
+      - time: 0
+        functionName: AnimStart
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       - time: 0.40809083
         functionName: RigWeight_Arm
         data: 
@@ -560,7 +567,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.49852216
+      - time: 0.5189303
         functionName: HitEnd
         data: 
         objectReferenceParameter: {instanceID: 0}

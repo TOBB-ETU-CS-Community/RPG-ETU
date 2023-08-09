@@ -20,4 +20,5 @@ public class CharacterLocomotionManager : MonoBehaviour
     {
         //character.isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundLayer, QueryTriggerInteraction.Ignore);
     }
+
 }

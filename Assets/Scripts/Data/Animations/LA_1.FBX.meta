@@ -550,6 +550,13 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: 0
+        functionName: AnimStart
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       - time: 0.4334975
         functionName: HitStart
         data: 
@@ -557,7 +564,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.47192118
+      - time: 0.50049263
         functionName: HitEnd
         data: 
         objectReferenceParameter: {instanceID: 0}
