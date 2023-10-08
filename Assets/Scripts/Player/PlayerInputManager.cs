@@ -63,6 +63,8 @@ public class PlayerInputManager : MonoBehaviour
 
             controls.PlayerAttack.LightAttack.performed += ctx => HandleAttackInput();
             controls.PlayerItems.ToggleWeapon.performed += ctx => HandleToggleWeaponInput();
+            
+            controls.PlayerAttack.MagicAttack.performed += ctx => HandleMagicAttackInput();
         }
 
         controls.Enable();
@@ -121,6 +123,11 @@ public class PlayerInputManager : MonoBehaviour
     public void HandleToggleWeaponInput()
     {
         player.playerInventory.ToggleWeapon();
+    }
+    
+    public void HandleMagicAttackInput()
+    {
+        player.playerCombatManager.HandleMagicAttack();
     }
     
     

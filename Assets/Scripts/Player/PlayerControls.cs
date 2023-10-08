@@ -369,6 +369,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MagicAttack"",
+                    ""type"": ""Button"",
+                    ""id"": ""19a550cf-d694-47a8-90b3-dc2ac3608f7a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -391,6 +400,28 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""LightAttack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""251c5efd-5ed0-4ac1-8f9d-6cc757fa6e55"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MagicAttack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""85340f73-43f7-4b96-b8de-e815ede4d7e3"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MagicAttack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -451,6 +482,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         // PlayerAttack
         m_PlayerAttack = asset.FindActionMap("PlayerAttack", throwIfNotFound: true);
         m_PlayerAttack_LightAttack = m_PlayerAttack.FindAction("LightAttack", throwIfNotFound: true);
+        m_PlayerAttack_MagicAttack = m_PlayerAttack.FindAction("MagicAttack", throwIfNotFound: true);
         // PlayerItems
         m_PlayerItems = asset.FindActionMap("PlayerItems", throwIfNotFound: true);
         m_PlayerItems_ToggleWeapon = m_PlayerItems.FindAction("ToggleWeapon", throwIfNotFound: true);
@@ -640,11 +672,13 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_PlayerAttack;
     private List<IPlayerAttackActions> m_PlayerAttackActionsCallbackInterfaces = new List<IPlayerAttackActions>();
     private readonly InputAction m_PlayerAttack_LightAttack;
+    private readonly InputAction m_PlayerAttack_MagicAttack;
     public struct PlayerAttackActions
     {
         private @PlayerControls m_Wrapper;
         public PlayerAttackActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @LightAttack => m_Wrapper.m_PlayerAttack_LightAttack;
+        public InputAction @MagicAttack => m_Wrapper.m_PlayerAttack_MagicAttack;
         public InputActionMap Get() { return m_Wrapper.m_PlayerAttack; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -657,6 +691,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @LightAttack.started += instance.OnLightAttack;
             @LightAttack.performed += instance.OnLightAttack;
             @LightAttack.canceled += instance.OnLightAttack;
+            @MagicAttack.started += instance.OnMagicAttack;
+            @MagicAttack.performed += instance.OnMagicAttack;
+            @MagicAttack.canceled += instance.OnMagicAttack;
         }
 
         private void UnregisterCallbacks(IPlayerAttackActions instance)
@@ -664,6 +701,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @LightAttack.started -= instance.OnLightAttack;
             @LightAttack.performed -= instance.OnLightAttack;
             @LightAttack.canceled -= instance.OnLightAttack;
+            @MagicAttack.started -= instance.OnMagicAttack;
+            @MagicAttack.performed -= instance.OnMagicAttack;
+            @MagicAttack.canceled -= instance.OnMagicAttack;
         }
 
         public void RemoveCallbacks(IPlayerAttackActions instance)
@@ -742,6 +782,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     public interface IPlayerAttackActions
     {
         void OnLightAttack(InputAction.CallbackContext context);
+        void OnMagicAttack(InputAction.CallbackContext context);
     }
     public interface IPlayerItemsActions
     {
