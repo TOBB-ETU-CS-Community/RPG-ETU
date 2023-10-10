@@ -36,7 +36,7 @@ public class UIEnemy : MonoBehaviour
     
     public void MoveUI()
     {
-        transform.position = enemyTransform.position + new Vector3(0, 1, 0);
+        transform.position = enemyTransform.position + new Vector3(0, 2, 0);
     }
        
 }

@@ -6,25 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0e4927da-f5dd-4134-9767-582950d9fa71" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG-ETU/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG-ETU/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Human.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Idle Two Handed.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Idle Two Handed.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player Camera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerControls.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EnemyHitboxManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnemyHitboxManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Animations/LA_2.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Animations/LA_2.FBX.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCombatManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerControls.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerControls.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInputManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Item/WeaponHitboxManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Item/WeaponHitboxManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/untitled2.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/untitled2.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -124,6 +109,8 @@
       <workItem from="1691551647892" duration="23318000" />
       <workItem from="1696769535870" duration="3547000" />
       <workItem from="1696785780699" duration="3725000" />
+      <workItem from="1696836951218" duration="671000" />
+      <workItem from="1696841314588" duration="1815000" />
     </task>
     <servers />
   </component>
