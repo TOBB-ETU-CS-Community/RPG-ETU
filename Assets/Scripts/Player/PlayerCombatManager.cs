@@ -22,10 +22,20 @@ public class PlayerCombatManager : CharacterCombatManager
         if (player.isPerformingAction)
         {
             if (isLightAttacking)
+            {
                 playerAnimationManager.UpdateAnimatorTriggerParameters("Light_Trigger");
+                return;
+            }
+            
+        }
+        
+        if (player.playerLocomotionManager.isSliding)
+        {
+            playerAnimationManager.PlayTargetActionAnimation("Slide_LA_1", true, 0.2f, false, true, true);
+            isLightAttacking = true;
             return;
         }
-
+        
         playerAnimationManager.PlayTargetActionAnimation(weapon.Light_Attack_1, true, 0.2f, true);
         isLightAttacking = true;
     }

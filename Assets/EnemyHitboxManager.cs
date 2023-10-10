@@ -7,13 +7,10 @@ public class EnemyHitboxManager : MonoBehaviour
 {
     public EnemyManager enemy;
     public CapsuleCollider hitboxCollider;
-    public LayerMask m_LayerMask;
-    bool m_Started;
     void Awake()
     {
         enemy = GetComponentInParent<EnemyManager>();
         hitboxCollider = GetComponentInChildren<CapsuleCollider>();
-        m_Started = true;
     }
     
     void FixedUpdate()
@@ -43,6 +40,5 @@ public class EnemyHitboxManager : MonoBehaviour
             }
         }
     }
-
 
 }

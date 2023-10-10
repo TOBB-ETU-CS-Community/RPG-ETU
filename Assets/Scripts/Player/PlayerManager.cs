@@ -49,6 +49,7 @@ public class PlayerManager : CharacterManager
 
     public override void ResetActionFlags()
     {
+        print("I am resetting action flags");
         isPerformingAction = false;
         applyRootMotion = false;
         canRotate = true;

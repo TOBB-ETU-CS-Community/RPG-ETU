@@ -12,7 +12,15 @@ public class PlayerLocomotionManager : CharacterLocomotionManager
     public float moveAmount;
     public float leanAmount;
     public float dodgeAmount = 4f;
+    public float rotateAmount = 10f;
+    public float speedChangeMultiplier = 1f;
     public bool isLockedOn;
+    public bool isSliding;
+
+    public float speed;
+    public float moveDirectionTimer = 0.5f;
+    
+    
     
     public Vector3 moveDirection;
     public Vector3 leanDirection;
@@ -74,12 +82,11 @@ public class PlayerLocomotionManager : CharacterLocomotionManager
         targetDirection.y = 0;
         targetDirection.Normalize();
         
-        moveDirection = Vector3.Lerp(moveDirection, targetDirection, 0.5f);
-        
-        var speed = moveAmount > 0.5f ? runSpeed : walkSpeed;
+        moveDirection = Vector3.Lerp(moveDirection, targetDirection, moveDirectionTimer);
+        speed = moveAmount > 0.5f ? runSpeed : walkSpeed;
         player.controller.Move(speed * Time.deltaTime * moveDirection);
         
-        if(isLockedOn)
+        if(isLockedOn || isSliding)
         {
             moveLockOn = Vector3.Lerp(moveLockOn, Vector3.up*vertical + Vector3.right*horizontal, 0.05f);
             if (moveAmount < 0.1f)
@@ -100,6 +107,9 @@ public class PlayerLocomotionManager : CharacterLocomotionManager
             
             player.playerAnimationManager.UpdateAnimatorMovementParameters(leanAmount, moveAmount);
         }
+        
+        
+        
     }
     
 
@@ -107,18 +117,23 @@ public class PlayerLocomotionManager : CharacterLocomotionManager
     {
         if (!player.canRotate) return;
         
-        if (PlayerCamera.instance.isLockedOn && !player.isSprinting)
+        if (PlayerCamera.instance.isLockedOn && !isSliding && !player.isSprinting)
         {
             targetDirection = PlayerCamera.instance.lockOnTarget.transform.position - transform.position;
             targetDirection.y = 0;
             targetDirection.Normalize();
-            
         }
-        
+
         if (targetDirection == Vector3.zero)
             targetDirection = transform.forward;
+
+        if (isSliding)
+        {
+            rotateAmount = Mathf.Lerp(rotateAmount, 1 / runSpeed, 0.1f);
+        }
         
-        var playerRotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetDirection), 10 * Time.deltaTime);
+        var playerRotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetDirection), rotateAmount * Time.deltaTime);
+        
         playerRotation.x = playerRotation.z = 0;
         transform.rotation = playerRotation;
         
@@ -227,5 +242,33 @@ public class PlayerLocomotionManager : CharacterLocomotionManager
         }
     }
 
-  
+    public void StartSlide()
+    {
+        
+        if (player.isPerformingAction)
+            return;
+        
+        isSliding = true;
+        speedChangeMultiplier = 0.4f;
+        moveDirectionTimer = 0.0001f;
+        runSpeed = runSpeed + 1f;
+        player.playerAnimationManager.UpdateAnimatorBoolParameters("isSliding", true);
+        player.playerAnimationManager.PlayTargetActionAnimation("Slide Start", true, 0.1f, false, true, true);
+        print("im here start slide");
+        
+        
+    }
+
+    public void StopSlide()
+    {
+        isSliding = false;
+        rotateAmount = 10f;
+        speedChangeMultiplier = 1f;
+        moveDirectionTimer = 0.5f;
+        runSpeed = runSpeed - 1f;
+        player.playerAnimationManager.UpdateAnimatorBoolParameters("isSliding", false);
+        print("im here end slide");
+        
+    }
+    
 }
