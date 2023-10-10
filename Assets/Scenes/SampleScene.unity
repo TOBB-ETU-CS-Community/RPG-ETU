@@ -922,6 +922,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
   hitboxCollider: {fileID: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!65 &663489318
 BoxCollider:
   m_ObjectHideFlags: 0
