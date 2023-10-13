@@ -13,6 +13,11 @@
         if (player.applyRootMotion)
         {
             var velocity = player.animator.deltaPosition;
+            if (player.isHitStunned)
+            {
+                velocity *= 0.5f;
+            }
+               
             player.controller.Move(velocity);
             player.transform.rotation *= player.animator.deltaRotation;
         }

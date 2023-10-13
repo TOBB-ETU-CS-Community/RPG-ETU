@@ -63,6 +63,11 @@ public class PlayerInputManager : MonoBehaviour
 
             controls.PlayerAttack.LightAttack.performed += ctx => HandleAttackInput();
             controls.PlayerItems.ToggleWeapon.performed += ctx => HandleToggleWeaponInput();
+            
+            controls.PlayerAttack.MagicAttack.performed += ctx => HandleMagicAttackInput();
+            
+            controls.PlayerMovement.Slide.performed += ctx => HandleSlideInput(true);
+            controls.PlayerMovement.Slide.canceled += ctx => HandleSlideInput(false);
         }
 
         controls.Enable();
@@ -123,5 +128,17 @@ public class PlayerInputManager : MonoBehaviour
         player.playerInventory.ToggleWeapon();
     }
     
-    
+    public void HandleMagicAttackInput()
+    {
+        player.playerCombatManager.HandleMagicAttack();
+    }
+
+    public void HandleSlideInput(bool slide)
+    {
+        if (slide)
+            player.playerLocomotionManager.StartSlide();
+        else
+            player.playerLocomotionManager.StopSlide();
+    }
+
 }

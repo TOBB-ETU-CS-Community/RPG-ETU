@@ -10,11 +10,14 @@ public class PlayerManager : CharacterManager
     [HideInInspector] public PlayerHUDManager playerHUDManager;
     [HideInInspector] public PlayerCombatManager playerCombatManager;
     [HideInInspector] public PlayerInventory playerInventory;
+    
+    private PlayerCamera cameraIns => PlayerCamera.instance;
 
 
     protected override void Awake()
     {
         base.Awake();
+        DontDestroyOnLoad(this);
         playerLocomotionManager = GetComponent<PlayerLocomotionManager>();
         playerAnimationManager = GetComponent<PlayerAnimationManager>();
         playerStatManager = GetComponent<PlayerStatManager>();
@@ -27,22 +30,31 @@ public class PlayerManager : CharacterManager
     {
         base.Update();
         playerLocomotionManager.HandleAllMovement();
-        playerStatManager.HandleAllStatChanges();
     }
 
     protected override void LateUpdate()
     {
         base.LateUpdate();
-        PlayerCamera.instance.HandleAllCameraMovement();
+        if (cameraIns.isLockedOn)
+        {
+            cameraIns.HandleLockOnCameraMovement();
+        }
+        else
+        {
+            cameraIns.HandleAllCameraMovement();
+        }
+        
         playerHUDManager.HandleHUD();
     }
 
     public override void ResetActionFlags()
     {
+        print("I am resetting action flags");
         isPerformingAction = false;
         applyRootMotion = false;
         canRotate = true;
         canMove = true;
         isLightAttacking = false;
+        isHitStunned = false;
     }
 }

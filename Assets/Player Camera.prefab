@@ -126,7 +126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4193760190438584971}
   - component: {fileID: 4193760190438584970}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,3 +174,5 @@ MonoBehaviour:
   isLockedOn: 0
   cameraSmoothSpeed: 0.1
   cameraVelocity: {x: 0, y: 0, z: 0}
+  lockOnSmoothSpeed: 0.2
+  lockOnTarget: {fileID: 0}

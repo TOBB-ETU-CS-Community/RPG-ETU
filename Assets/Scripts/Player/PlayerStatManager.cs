@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Character;
 using UnityEngine;
 
 public class PlayerStatManager : CharacterStatManager
@@ -7,26 +6,26 @@ public class PlayerStatManager : CharacterStatManager
     private PlayerManager player;
     
     [Header("Health")]
-    public float maxHealth = 100;
-    public float currentHealth = 100;
-    public float healthRegenValue = 15;
-    public float healthRegenTimer = 2;
+    [SerializeField] public float maxHealth = 100;
+    [SerializeField] public float currentHealth = 100;
+    [SerializeField] public float healthRegenValue = 15;
+    [SerializeField] public float healthRegenTimer = 2;
     
     [Header("Health Constraints")]
-    public bool isDead;
+    [SerializeField] public bool isDead;
 
     [Header("Stamina")]
-    public float maxStamina = 100;
-    public float currentStamina = 100;
-    public float staminaRegenValue = 15;
-    public float staminaRegenTimer = 2;
+    [SerializeField] public float maxStamina = 100;
+    [SerializeField] public float currentStamina = 100;
+    [SerializeField] public float staminaRegenValue = 15;
+    [SerializeField] public float staminaRegenTimer = 2;
     
     [Header("Stamina Constraints")]
-    public bool canSprint;
-    public bool canDodge;
-    public bool canBackstep;
-    public bool canJump;
-    public bool isFatigue;
+    [SerializeField] public bool canSprint;
+    [SerializeField] public bool canDodge;
+    [SerializeField] public bool canBackstep;
+    [SerializeField] public bool canJump;
+    [SerializeField] public bool isFatigue;
 
     private readonly Dictionary<float, bool[]> staminaThresholds = new Dictionary<float, bool[]>
     {
@@ -36,31 +35,30 @@ public class PlayerStatManager : CharacterStatManager
         { 9999f, new[]{true,true,true} },
     };
 
-    public bool statChanged;
+    [SerializeField] public bool statChanged;
     
 
     public void Awake()
     {
-        base.Awake();
         player = GetComponent<PlayerManager>();
         statChanged = true;
     }
     
-    public void HandleAllStatChanges()
+    protected override void HandleAllStatChanges()
     {
         HandleHealth();
         HandleStamina();
         HandleStatConstraints();
     }
 
-    private void HandleStatConstraints()
+    protected override void HandleStatConstraints()
     { 
        HandleHealthConstraints();
        HandleStaminaConstraints();
     }
-    
 
-    public void HandleStamina()
+
+    private void HandleStamina()
     {
         if (staminaRegenTimer > 0)
         {
@@ -112,9 +110,9 @@ public class PlayerStatManager : CharacterStatManager
         currentStamina += value;
         staminaRegenTimer = staminaRegenTimer > timer ? staminaRegenTimer : timer;
     }
-  
 
-    public void HandleHealth()
+
+    private void HandleHealth()
     {
         if (currentHealth <= 0)
         {
@@ -135,10 +133,9 @@ public class PlayerStatManager : CharacterStatManager
         
       
     }
-    
-    
-    
-    public void HandleHealthConstraints()
+
+
+    private void HandleHealthConstraints()
     {
         if (isDead)
         {

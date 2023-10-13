@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class WeaponHolderSlot : MonoBehaviour
@@ -10,7 +11,6 @@ public class WeaponHolderSlot : MonoBehaviour
    {
        if (weaponItem == null)
            return;
-
 
        var model = Instantiate(weaponItem.modelPrefab);
 
@@ -25,6 +25,7 @@ public class WeaponHolderSlot : MonoBehaviour
        model.transform.localRotation = Quaternion.identity;
        model.transform.localScale = Vector3.one;
        currentWeaponModel = model;
+       
    }
    
     public void UnloadWeaponModel()

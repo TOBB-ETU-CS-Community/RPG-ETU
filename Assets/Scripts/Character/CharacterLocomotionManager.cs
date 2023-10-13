@@ -4,9 +4,8 @@ public class CharacterLocomotionManager : MonoBehaviour
 {
     CharacterManager character;
     
-    [SerializeField] protected Vector3 yVelocity;
-    [SerializeField] protected Vector3 groundedVelocity;
-    [SerializeField] protected Vector3 fallingVelocity;
+    [SerializeField] protected float groundedVelocity;
+    [SerializeField] protected Vector3 positionalVelocity;
 
     protected virtual void Awake()
     {
@@ -20,4 +19,5 @@ public class CharacterLocomotionManager : MonoBehaviour
     {
         //character.isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundLayer, QueryTriggerInteraction.Ignore);
     }
+
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   itemName: Sword
-  modelPrefab: {fileID: 258763429760504942, guid: d874c244fc2a42d478f060283a57e73d, type: 3}
+  modelPrefab: {fileID: 8537558680947535137, guid: 37e046934144c7d41b3db13db57c9f15, type: 3}
   Light_Attack_1: LA_1
   Light_Attack_2: 
   Light_Attack_3: 

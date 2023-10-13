@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,5 @@ public class WeaponItem : Item
     public string Heavy_Attack_2;
     public string Heavy_Attack_3;
     public string Idle;
-
-
+    
 }

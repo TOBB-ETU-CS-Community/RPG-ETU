@@ -22,6 +22,10 @@ public class PlayerCamera : MonoBehaviour
     [SerializeField] private Vector3 cameraVelocity;
     private float cameraZPosition;
     private float targetCameraZPosition;
+    
+    [Header("Lock On Settings")]
+    [SerializeField] public float lockOnSmoothSpeed = 7.5f;
+    [SerializeField] public GameObject lockOnTarget;
 
 
     private void Awake()
@@ -40,12 +44,19 @@ public class PlayerCamera : MonoBehaviour
 
     public void HandleAllCameraMovement()
     {
-        if (player != null)
+        if (isLockedOn)
+        {
+            HandleLockOnCameraMovement();
+        }
+            
+        else
         {
             FollowTarget();
             HandleRotations();
-            HandleCollisions();
         }
+        
+        HandleCollisions();
+        
     }
 
     private void FollowTarget()
@@ -98,5 +109,25 @@ public class PlayerCamera : MonoBehaviour
         cameraObjectPosition.z =
             Mathf.Lerp(cameraObject.transform.localPosition.z, targetCameraZPosition, 5 * Time.deltaTime);
         cameraObject.transform.localPosition = cameraObjectPosition;
+    }
+    
+
+    public void HandleLockOnCameraMovement()
+    {
+        FollowTarget();
+        
+        var lockOnTransform = lockOnTarget.transform;
+        var cameraTargetPosition = lockOnTransform.position + lockOnTarget.transform.right * 0.5f + lockOnTransform.up * 1.5f;
+
+        var cameraTargetDirection = cameraTargetPosition - transform.position ;
+        cameraTargetDirection.Normalize();
+        cameraTargetDirection.y = 0;
+
+        var cameraTargetRotation = Quaternion.LookRotation(cameraTargetDirection);
+        transform.rotation = Quaternion.Slerp(transform.rotation, cameraTargetRotation, lockOnSmoothSpeed * Time.deltaTime);
+
+
+
+
     }
 }

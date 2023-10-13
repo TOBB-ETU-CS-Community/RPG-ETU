@@ -7,30 +7,35 @@
     <list default="true" id="0e4927da-f5dd-4134-9767-582950d9fa71" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RPG-ETU/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RPG-ETU/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/Human.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Human.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Downloaded/Animations/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@Attack1_S.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Downloaded/Animations/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@Attack1_S.FBX.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Downloaded/Animations/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@Attack2.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Downloaded/Animations/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@Attack2.FBX.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Downloaded/Animations/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@Attack3.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Downloaded/Animations/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@Attack3.FBX.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Downloaded/Animations/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@MoveAttack1.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Downloaded/Animations/2 Handed Warrior Mecanim Animation Pack/Animations/2Handed@MoveAttack1.FBX.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Great Sword Pack/spin attack.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Great Sword Pack/spin attack.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/ResetActionFlag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/ResetActionFlag.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterAnimationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterAnimationManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Prefabs/Weapons/Sword.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Prefabs/Weapons/Sword.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCombatManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterLocomotionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterLocomotionManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerLocomotionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerLocomotionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f712b1dc50b4468388b9c5f95d0d0eaf159e00/68/8b2fe0ba/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AnimationSpeed.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EnemyHitboxManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyParentalControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyUIManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Item/WeaponHitboxManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.5.1/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2TBaTW2PqGAkU2EmG9699w5BM7Q" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -57,7 +62,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="E:\Unity\2021.3.25f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\Asgrich\RPG-ETU\RPG-ETU -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Asgrich\RPG-ETU\RPG-ETU" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -65,7 +70,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="E:\Unity\2021.3.25f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\Asgrich\RPG-ETU\RPG-ETU -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Asgrich\RPG-ETU\RPG-ETU" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -104,6 +109,18 @@
       <workItem from="1690518945380" duration="20000" />
       <workItem from="1690518975918" duration="1984000" />
       <workItem from="1690773413197" duration="5435000" />
+      <workItem from="1691392620725" duration="11820000" />
+      <workItem from="1691406817722" duration="1403000" />
+      <workItem from="1691551647892" duration="23318000" />
+      <workItem from="1696769535870" duration="3547000" />
+      <workItem from="1696785780699" duration="3725000" />
+      <workItem from="1696836951218" duration="671000" />
+      <workItem from="1696841314588" duration="1815000" />
+      <workItem from="1696926734923" duration="14032000" />
+      <workItem from="1696952258590" duration="2058000" />
+      <workItem from="1696954668905" duration="3182000" />
+      <workItem from="1697034932372" duration="1963000" />
+      <workItem from="1697129404206" duration="6267000" />
     </task>
     <servers />
   </component>

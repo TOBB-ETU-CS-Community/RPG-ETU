@@ -15,11 +15,12 @@ public class CharacterManager : MonoBehaviour
     public bool isFalling = false;
     public bool isSprinting = false;
     public bool isLightAttacking = false;
+    public bool isHitStunned = false; 
 
 
     protected virtual void Awake()
     {
-        DontDestroyOnLoad(this);
+        //DontDestroyOnLoad(this);
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
     }
@@ -38,6 +39,6 @@ public class CharacterManager : MonoBehaviour
         applyRootMotion = false;
         canRotate = true;
         canMove = true;
-
+        isHitStunned = false;
     }
 }

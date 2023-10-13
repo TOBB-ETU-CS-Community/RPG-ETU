@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Finger
+  - Weapon
+  - Enemy
+  - Floor
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -12,9 +16,9 @@ TagManager:
   - Player
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Post Process
+  - Ground
+  - Wall
   - 
   - 
   - 
