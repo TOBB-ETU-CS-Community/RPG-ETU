@@ -26,6 +26,7 @@ public class CharacterAnimationManager : MonoBehaviour
         character.canRotate = canRotate;
         character.canMove = canMove;
         
+        
         character.animator.CrossFade(targetAnim, transitionDuration);
     }
     

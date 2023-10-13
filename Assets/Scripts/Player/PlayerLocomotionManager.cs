@@ -39,18 +39,31 @@ public class PlayerLocomotionManager : CharacterLocomotionManager
 
     private Vector3 moveLockOn;
     public Transform groundCheckTransform;
+    public Transform wallCheckTransformLeft;
+    public Transform wallCheckTransformRight;
 
+    public Vector3 OldVector;
+    public Vector3 realVelocity;
     
+    bool wallRunLeftAllowed = true;
+    bool wallRunRightAllowed = true;
     protected override void Awake()
     {
         base.Awake();
         player = GetComponent<PlayerManager>();
         rigs = GetComponentsInChildren<Rig>();
+        OldVector = player.transform.position;
         
     }
 
     public void HandleAllMovement()
     {
+        
+        
+        positionalVelocity = (OldVector - player.transform.position)*10;
+        groundedVelocity = Mathf.Sqrt(positionalVelocity.x * positionalVelocity.x + positionalVelocity.z * positionalVelocity.z);
+        OldVector = player.transform.position;
+        
         GetMovementValues();
         HandleMovement();
         HandleRotation();
@@ -64,6 +77,11 @@ public class PlayerLocomotionManager : CharacterLocomotionManager
         {
             player.playerStatManager.staminaRegenValue = 15;
         }
+        
+        if(!isGrounded)
+            WallRun();
+        
+      
     }
 
     private void GetMovementValues()
@@ -89,10 +107,10 @@ public class PlayerLocomotionManager : CharacterLocomotionManager
         targetDirection.y = 0;
         targetDirection.Normalize();
         
-        moveDirection = Vector3.Lerp(moveDirection, targetDirection, moveDirectionTimer);
         speed = moveAmount > 0.5f ? runSpeed : walkSpeed;
-        player.controller.Move( Time.deltaTime * speed * moveDirection);
-        
+        realVelocity = Vector3.Lerp(realVelocity, targetDirection*speed, moveDirectionTimer);
+        player.controller.Move(Time.deltaTime * realVelocity);
+
         if(isLockedOn || isSliding)
         {
             moveLockOn = Vector3.Lerp(moveLockOn, Vector3.up*vertical + Vector3.right*horizontal, 0.05f);
@@ -116,28 +134,69 @@ public class PlayerLocomotionManager : CharacterLocomotionManager
         }
 
     }
-    
+
+    private void WallRun()
+    {
+        var hitLeft = Physics.OverlapSphere(wallCheckTransformLeft.position, 0.1f, LayerMask.GetMask("Wall"));
+        var hitRight = Physics.OverlapSphere(wallCheckTransformRight.position, 0.1f, LayerMask.GetMask("Wall"));
+        
+        if (hitLeft.Length > 0 && wallRunLeftAllowed)
+        {
+            
+            player.playerAnimationManager.PlayTargetActionAnimation("Wall Run", true, 0.1f);
+            var wallNormal = hitLeft[0].transform.forward;
+            wallNormal.y = 0;
+            wallNormal.Normalize();
+            var targetRotation = Quaternion.LookRotation(wallNormal);
+            player.transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 0.5f);
+
+            var targetPosition = hitLeft[0].transform.position + wallNormal;
+            targetPosition.y = player.transform.position.y; 
+            player.transform.position = Vector3.Lerp(transform.position, targetPosition, 0.5f);
+            wallRunLeftAllowed = false;
+            wallRunRightAllowed = true;
+
+        }
+        else if (hitRight.Length > 0)
+        {
+            player.playerAnimationManager.PlayTargetActionAnimation("Wall Run", true, 0.001f);
+            wallRunRightAllowed = false;
+            wallRunLeftAllowed = true;
+            
+        }
+    }
     private void HandleVerticalMovement()
     {
         var hit = Physics.OverlapSphere(groundCheckTransform.position, 0.2f, LayerMask.GetMask("Ground"));
         
         if(hit.Length > 0)
         {
-            if(!isGrounded)
-                player.playerAnimationManager.PlayTargetActionAnimation("Landing", true, 0.1f);
+            if (!isGrounded){
+                
+                if(groundedVelocity > 0.3f)
+                    player.playerAnimationManager.PlayTargetActionAnimation("Land Roll", true, 0.1f);
+                else
+                    player.playerAnimationManager.PlayTargetActionAnimation("Landing", true, 0.1f);
+            }
+                
             isGrounded = true;
             isFalling = false;
             isJumping = false;
+            wallRunLeftAllowed = true;
+            wallRunRightAllowed = true;
+            if(!isSliding)
+                moveDirectionTimer = 0.5f;
         }
         else
         {
             isGrounded = false;
             isFalling = true;
-            
+            moveDirectionTimer = 0.0005f;
+                
         }
         
         jumpAmount = Mathf.Lerp(jumpAmount, 0, 0.01f);
-        player.controller.Move(Time.deltaTime * (jumpAmount - 5f) * Vector3.up);
+        player.controller.Move(Time.deltaTime * (jumpAmount - 10f) * Vector3.up);
         player.playerAnimationManager.UpdateAnimatorBoolParameters("isGrounded",isGrounded);
     }
 
@@ -145,6 +204,10 @@ public class PlayerLocomotionManager : CharacterLocomotionManager
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(groundCheckTransform.position, 0.2f);
+        
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(wallCheckTransformLeft.position, 0.1f);
+        Gizmos.DrawWireSphere(wallCheckTransformRight.position, 0.1f);
     }
 
 
@@ -162,9 +225,13 @@ public class PlayerLocomotionManager : CharacterLocomotionManager
         if (targetDirection == Vector3.zero)
             targetDirection = transform.forward;
 
-        if (isSliding)
+        if (isSliding || !isGrounded)
         {
             rotateAmount = Mathf.Lerp(rotateAmount, 1 / runSpeed, 0.1f);
+        }
+        else
+        {
+            rotateAmount = 10f;
         }
         
         var playerRotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetDirection), rotateAmount * Time.deltaTime);
@@ -178,7 +245,14 @@ public class PlayerLocomotionManager : CharacterLocomotionManager
     public void UpdateJumpAmount()
     {
         print("Jump updated");
-        jumpAmount = 20f;
+        jumpAmount = 15f;
+    }
+
+    public void KeepVelocity()
+    {
+        realVelocity = player.animator.velocity;
+        
+        
     }
     
 
@@ -282,16 +356,14 @@ public class PlayerLocomotionManager : CharacterLocomotionManager
                 player.playerAnimationManager.PlayTargetActionAnimation("SlideJump", true, 0.05f, false, true, true);
         }
     }
-    
     public void StartSlide()
     {
-        
         if (player.isPerformingAction)
             return;
         
         isSliding = true;
         speedChangeMultiplier = 0.4f;
-        moveDirectionTimer = 0.0001f;
+        moveDirectionTimer = 0.005f;
         runSpeed = runSpeed + 1f;
         player.playerAnimationManager.UpdateAnimatorBoolParameters("isSliding", true);
         player.playerAnimationManager.PlayTargetActionAnimation("Slide Start", true, 0.1f, false, true, true);
@@ -303,7 +375,6 @@ public class PlayerLocomotionManager : CharacterLocomotionManager
     public void StopSlide()
     {
         isSliding = false;
-        rotateAmount = 10f;
         speedChangeMultiplier = 1f;
         moveDirectionTimer = 0.5f;
         runSpeed = runSpeed - 1f;
