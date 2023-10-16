@@ -1,4 +1,6 @@
-﻿public class PlayerAnimationManager : CharacterAnimationManager
+﻿using UnityEngine;
+
+public class PlayerAnimationManager : CharacterAnimationManager
 {
     private PlayerManager player;
 
@@ -27,5 +29,9 @@
     {
         player.animator.SetFloat("TurnAngle", normalizedTurnAngle);
     }
-    
+
+    public void UpdateAnimatorFloatParameters(string s, float f)
+    {
+        player.animator.SetFloat(s, f, 0.1f, Time.deltaTime);
+    }
 }

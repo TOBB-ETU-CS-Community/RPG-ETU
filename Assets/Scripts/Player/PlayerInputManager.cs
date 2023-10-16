@@ -21,6 +21,11 @@ public class PlayerInputManager : MonoBehaviour
     private PlayerControls controls;
 
     public bool lockOnInput;
+    public bool sprintInput;
+    public bool dodgeInput;
+    public bool jumpInput;
+    public bool attackInput;
+    public bool toggleWeaponInput;
 
     private void Awake()
     {
@@ -79,7 +84,7 @@ public class PlayerInputManager : MonoBehaviour
         horizontalInput = movementInput.x;
 
         moveInputAmount = Mathf.Clamp01(Mathf.Abs(horizontalInput) + Mathf.Abs(verticalInput));
-        moveAmount = Mathf.Lerp(moveAmount, moveInputAmount, 0.02f);
+        moveAmount = Mathf.Lerp(moveAmount, moveInputAmount, Time.deltaTime * 10f);
 
         if (moveAmount < 0.00001f) moveAmount = 0;
     }
@@ -110,7 +115,10 @@ public class PlayerInputManager : MonoBehaviour
 
     public void HandleSprintInput(bool sprint)
     {
-        player.playerLocomotionManager.HandleSprint(sprint);
+        if(sprint)
+            player.playerLocomotionManager.StartSprint();
+        else
+            player.playerLocomotionManager.EndSprint();
     }
     
     public void HandleJumpInput()

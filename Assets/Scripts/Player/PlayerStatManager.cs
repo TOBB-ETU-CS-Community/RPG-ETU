@@ -92,6 +92,15 @@ public class PlayerStatManager : CharacterStatManager
             return;
         }
         
+        if (player.isSprinting)
+        {
+            staminaRegenValue = -30;
+        }
+        else
+        {
+            staminaRegenValue = 15;
+        }
+        
         canSprint = true;
         foreach (var kvp in staminaThresholds)
         {

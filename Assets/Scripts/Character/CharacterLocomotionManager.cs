@@ -4,7 +4,7 @@ public class CharacterLocomotionManager : MonoBehaviour
 {
     CharacterManager character;
     
-    [SerializeField] protected float groundedVelocity;
+    [SerializeField] protected float onGroundSpeed;
     [SerializeField] protected Vector3 positionalVelocity;
 
     protected virtual void Awake()

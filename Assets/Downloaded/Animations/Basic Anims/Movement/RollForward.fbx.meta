@@ -31,9 +31,7 @@ ModelImporter:
       will be discarded.\n\t'Ankle_R' has translation animation that will be discarded.\n\t'Toes_R'
       has translation animation that will be discarded.\n\t'Knee_L' has translation
       animation that will be discarded.\n\t'Ankle_L' has translation animation that
-      will be discarded.\n\t'Toes_L' has translation animation that will be discarded.\nEvent
-      RigWeight_Arm has a time (0.000000) outside the clip's valid range (0.000000..1.400000).
-      It will never be fired"
+      will be discarded.\n\t'Toes_L' has translation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 1

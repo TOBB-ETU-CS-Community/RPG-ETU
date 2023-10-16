@@ -13,6 +13,8 @@ public class PlayerManager : CharacterManager
     
     private PlayerCamera cameraIns => PlayerCamera.instance;
 
+    [SerializeField] private float timeScale = 1f;
+
 
     protected override void Awake()
     {
@@ -30,6 +32,7 @@ public class PlayerManager : CharacterManager
     {
         base.Update();
         playerLocomotionManager.HandleAllMovement();
+        Time.timeScale = timeScale;
     }
 
     protected override void LateUpdate()
@@ -49,7 +52,6 @@ public class PlayerManager : CharacterManager
 
     public override void ResetActionFlags()
     {
-        print("I am resetting action flags");
         isPerformingAction = false;
         applyRootMotion = false;
         canRotate = true;
